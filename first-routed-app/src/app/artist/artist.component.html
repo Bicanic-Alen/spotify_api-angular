@@ -1,12 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col - md">
-      <h1>{{artist.name}}</h1>
-      <img src="{{artist.images[1].url}}" height="35%" width="35%">
-      <h3><b>followers:</b> {{artist.followers.total}} | <b>popularity: </b>{{artist.popularity}}</h3>
-      <h4><b>genres: </b> {{artist.genres}}</h4>
-      <h4><b>type: </b>{{artist.type}} | <a href = '{{artist.external_urls.spotify}}'><b>go to spotify</b></a></h4>
-      <p><a href (click)="back()">Back</a></p>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="content">
+        <h1>{{artist.name}}</h1>
+        <img src="{{artist.images[1].url}}">
+        <h3 ><b class = 'text-success'>Followers:</b> {{artist.followers.total}}<b class = 'text-success'> Popularity: </b>{{artist.popularity}}</h3>
+        <h4><b class = 'text-success'>Genres: </b> {{artist.genres}}</h4>
+        <h4><a href = '{{artist.external_urls.spotify}}'><b class = 'text-success'>go to spotify</b></a></h4>
+        <p><a href (click)="back()">Back</a></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
