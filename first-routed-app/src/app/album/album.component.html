@@ -1,1 +1,13 @@
-{{album | json}}
+<div class="container">
+  <div class="row">
+    <div class="col - md">
+      <h1>{{album.name}}</h1>
+      <img src="{{album.images[0].url}}" height="35%" width="35%">
+      <h3><b>{{album.artists[0].type}}: </b> {{album.artists[0].name}} | <b>album popularity: </b>{{album.popularity}}</h3>
+      <h4><b>copyrights: </b> {{album.copyrights[0].text}}</h4>
+      <h4><a href = '{{album.external_urls.spotify}}'><b>view the album on spotify</b></a></h4>
+      <p><a href (click)="back()">Back</a></p>
+    </div>
+  </div>
+</div>
+
