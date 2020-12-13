@@ -1,12 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="col - md">
-      <h1>{{album.name}}</h1>
-      <img src="{{album.images[0].url}}" height="35%" width="35%">
-      <h3><b>{{album.artists[0].type}}: </b> {{album.artists[0].name}} | <b>album popularity: </b>{{album.popularity}}</h3>
-      <h4><b>copyrights: </b> {{album.copyrights[0].text}}</h4>
-      <h4><a href = '{{album.external_urls.spotify}}'><b>view the album on spotify</b></a></h4>
-      <p><a href (click)="back()">Back</a></p>
+<div class="row justify-center">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail bg-dark">
+        <div class="content">
+        <h1 class = "display-2 text-success">{{album.name}}</h1>
+        <img src="{{album.images[0].url}}" height="100%" width="100%">
+        <h3 class = "text-light"><b class = "text-success">{{album.artists[0].type}}: </b> {{album.artists[0].name}} | <b class = "text-success">album popularity: </b>{{album.popularity}}</h3>
+        <h4 class = "text-light"><b class = "text-success">copyrights: </b> {{album.copyrights[0].text}}</h4>
+        </div>
+      <h1 class = "display-3 text-success">Tracks: </h1>
+      <div *ngFor = "let item of album.tracks.items">
+          <h1 class = "text-light"><li>{{item.name}}<br><audio controls src="{{item.preview_url}}"></audio></li></h1>
+      </div>
+      <div class="btn-group">
+        <a type="button" class="btn btn-primary" href (click)="back()"><h5><b>Back</b></h5></a>
+        <a type="button" class="btn btn-success" href = '{{album.external_urls.spotify}}'><h5><b>view the album on spotify</b></h5></a>
+      </div>
     </div>
   </div>
 </div>
