@@ -1,9 +1,9 @@
 
-<h1>Search</h1>
+<h1 class="text-success display-3">Search</h1>
 
 <p>
   <input type="text" #newquery>
-  <button (click)="submit(newquery)">Search</button>
+  <button class = "btn btn-outline-success" (click)="submit(newquery)">Search</button>
 </p>
 
 <div *ngIf="results">
@@ -22,20 +22,20 @@
             <div class="caption">
               <h3>
                 <a [routerLink]="['/artists', t.artists[0].id]">
-                  {{ t.artists[0].name }}
+                  <h1 class ="text-success display-4">{{ t.artists[0].name }}</h1>
                 </a>
               </h3>
               <br>
               <p>
                 <a [routerLink]="['/tracks', t.id]">
-                  {{ t.name }}
+                  <h4 class = "text-success">{{ t.name }}</h4>
                 </a>
               </p>
             </div>
             <div class="attribution">
               <h4>
                 <a [routerLink]="['/albums', t.album.id]">
-                  {{ t.album.name }}
+                  <h2 class = "text-success display-4">{{ t.album.name }}</h2>
                 </a>
               </h4>
             </div>
