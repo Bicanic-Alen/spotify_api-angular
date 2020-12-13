@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row row justify-content-center">
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail bg-dark">
         <div class="content">
@@ -8,6 +8,7 @@
         <h4  class =  "text-light"><b class = 'text-success'>Genres: </b> {{artist.genres}}</h4>
         <div class="btn-group">
           <button type="button" class="btn btn-primary" (click)="back()">back</button>
+          <a type="button" class="btn btn-success" [routerLink]="['/allAlbum', artist.id]">View all albums</a>
           <a type="button" class="btn btn-success" href='{{artist.external_urls.spotify}}'>Go on spotify</a>
         </div>
         </div>

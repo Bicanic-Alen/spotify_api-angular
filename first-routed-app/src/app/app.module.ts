@@ -10,6 +10,7 @@ import { TrackComponent } from './track/track.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AllAlbumComponent } from './all-album/all-album.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ArtistComponent,
     TrackComponent,
     AboutComponent,
-    SearchComponent
+    SearchComponent,
+    AllAlbumComponent
   ],
   imports: [
     BrowserModule,

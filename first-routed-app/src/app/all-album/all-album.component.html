@@ -1,0 +1,20 @@
+<h1 class = "display-1">Albums: </h1>
+    <div class="row justify-content-center">
+      <div class="col-sm-6 col-md-4" *ngFor="let item of AllAlbum.items">
+        <div class="thumbnail">
+          <div class="content">
+            <img src="{{ item.images[0].url}}" class="img-responsive">
+            <div class="caption">
+             <h1><b class = "display-3">{{item.name}}</b></h1>
+             <a [routerLink]="['/artists', item.artists[0].id]"><h2 class = "display-3"><b class = "text-success">By:</b> {{item.artists[0].name}}</h2></a>
+          </div>
+          <div class = "btn-group">
+              <button type="button" class="btn btn-primary" (click)="back()">Back</button>
+              <a type="button" class="btn btn-success" [routerLink]="['/albums', item.id]">Go to details</a>
+              <a type="button" class="btn btn-success" href='{{item.external_urls.spotify}}'>Go to spotify</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

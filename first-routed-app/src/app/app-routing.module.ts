@@ -5,6 +5,7 @@ import { SearchComponent } from './search/search.component';
 import { TrackComponent } from './track/track.component';
 import { ArtistComponent } from './artist/artist.component';
 import { AlbumComponent } from './album/album.component';
+import { AllAlbumComponent } from './all-album/all-album.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'tracks/:id', component: TrackComponent },
   { path: '',   redirectTo: '/search', pathMatch: 'full' },
   { path: 'artists/:id', component: ArtistComponent },
-  { path: 'albums/:id', component: AlbumComponent }
+  { path: 'albums/:id', component: AlbumComponent },
+  { path: 'allAlbum/:id', component: AllAlbumComponent }
 ];
 
 @NgModule({
