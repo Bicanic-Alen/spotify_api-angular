@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AllAlbumComponent } from './all-album/all-album.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AllAlbumComponent } from './all-album/all-album.component';
     TrackComponent,
     AboutComponent,
     SearchComponent,
-    AllAlbumComponent
+    AllAlbumComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
