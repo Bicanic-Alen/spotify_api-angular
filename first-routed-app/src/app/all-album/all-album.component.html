@@ -1,8 +1,9 @@
 <hr>
 <h1 class = "display-1">Albums: </h1>
+<div *ngIf="AllAlbum" >
     <div class="row justify-content-center">
       <div class="col-sm-6 col-md-4" *ngFor="let item of AllAlbum.items">
-        <div class="thumbnail">
+        <div class="thumbnail background-color">
           <div class="content">
             <img src="{{ item.images[0].url}}" class="img-responsive">
             <div class="caption">
@@ -18,4 +19,6 @@
       </div>
     </div>
   </div>
+</div>
+
 

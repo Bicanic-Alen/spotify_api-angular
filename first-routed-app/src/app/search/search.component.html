@@ -5,7 +5,6 @@
   <input type="text" #newquery>
   <button class = "btn btn-outline-success" (click)="submit(newquery)">Search</button>
 </p>
-
 <div *ngIf="results">
   <div *ngIf="!results.tracks || results.tracks.items.length ==0">
     No tracks were found with the term '{{ query }}'
