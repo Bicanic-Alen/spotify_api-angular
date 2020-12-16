@@ -1,9 +1,8 @@
-<h1 class="display-2 text-success">Songs</h1>
-<nav class = "btn-group">
-  <a class = "btn btn-primary" routerLink="/about" routerLinkActive="active">about</a>
-  <a class = "btn btn-success" routerLink="/search" routerLinkActive="active">search</a>
-  <a class = "btn btn-success" routerLink="/login" routerLinkActive="active">login</a>
-</nav>
-<hr>
+  <ul class="topnav">
+    <li><a><h1 class="text-success">Songs</h1></a> </li>
+    <li><a routerLink="/search" routerLinkActive="active"><h2>Search</h2></a></li>
+    <li><a routerLink="/about" routerLinkActive="active"><h2>About</h2></a></li>
+    <li><a routerLink="/login" routerLinkActive="active"><h2>Login</h2></a></li>
+  </ul>
 <!--qui è dove angular sostituirà i componenti richiamati dal routing-->
 <router-outlet></router-outlet>

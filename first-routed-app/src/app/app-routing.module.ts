@@ -12,12 +12,12 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'search', component: SearchComponent },
   { path: 'tracks/:id', component: TrackComponent },
-  { path: '',   redirectTo: '/search', pathMatch: 'full' },
   { path: 'artists/:id', component: ArtistComponent },
   { path: 'albums/:id', component: AlbumComponent },
   { path: 'allAlbum/:id', component: AllAlbumComponent },
   { path: 'login', component : LoginComponent},
-  { path: 'authorized', component : LoginComponent}
+  { path: 'authorized', component : LoginComponent},
+  { path: '',   redirectTo: '/search', pathMatch: 'full' },
 ];
 
 @NgModule({
