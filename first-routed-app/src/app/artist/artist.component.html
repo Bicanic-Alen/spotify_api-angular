@@ -1,7 +1,9 @@
 <hr>
 <div class="row row justify-content-center">
+
     <div class="col-sm-6 col-md-4">
-      <div class="thumbnail bg-dark">
+      <div *ngIf="artist">
+      <div class="thumbnail backgroud-color">
         <div class="content">
         <h1 class =  "text-light display-3 text-center">{{artist.name}}</h1>
         <img src="{{artist.images[1].url}} " height="100%" width="100%" >
@@ -15,6 +17,7 @@
         </div>
       </div>
     </div>
+  </div>
 </div>
 
 

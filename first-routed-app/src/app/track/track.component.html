@@ -1,6 +1,7 @@
+<hr>
 <div class="row justify-content-center">
   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
+    <div class="thumbnail background-color">
       <div *ngIf="track">
           <h1 class = "text-success display-3">{{ track.name }}</h1>
           <p>
@@ -9,9 +10,14 @@
           <div>
               <audio controls src="{{ track.preview_url }}"></audio>
           </div>
-          <a class = "btn btn-primary" href (click)="back()">Back</a>
+          <div class="btn-group">
+          <a class = "btn btn-primary" (click)="back()">Back</a>
+          <a class = "btn btn-success" [routerLink]="['/artists', track.artists[0].id]">Go to the artist</a>
+          <a class = "btn btn-success" [routerLink]="['/albums', track.album.id]">Go to the album</a>
           <a class = "btn btn-success" href ="{{track.external_urls.spotify}}">Go to spotify</a>
+          </div>
       </div>
     </div>
   </div>
 </div>
+

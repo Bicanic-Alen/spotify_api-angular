@@ -12,7 +12,7 @@ token : string = "";
   authConfig: AuthConfig = {
     client_id: "6be680f0bcb74feda00a0f82b56f9d0d",  // WebPortal App Id. Shoud be config
     response_type: "token",
-    redirect_uri: "https://4200-a975e527-25c4-4b9b-9471-a74ea7d6d4c0.ws-eu03.gitpod.io/authorized",  // My URL
+    redirect_uri: "https://4200-c20fc33c-4748-47de-b4c3-3d750e5876f7.ws-eu03.gitpod.io/authorized",  // My URL
     state: "",
     show_dialog: true,
     scope: new ScopesBuilder().withScopes(ScopesBuilder.LIBRARY).build()

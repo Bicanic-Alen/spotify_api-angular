@@ -1,21 +1,21 @@
 <hr>
 <div class="row row justify-content-center">
     <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
+      <div class="thumbnail background-color">
         <div class="content">
         <h1 class = "display-2 text-success">{{album.name}}</h1>
         <img src="{{album.images[0].url}}" height="100%" width="100%">
-        <h3 ><b class = "text-success">{{album.artists[0].type}}: </b> {{album.artists[0].name}} | <b class = "text-success">album popularity: </b>{{album.popularity}}</h3>
-        <h4 ><b class = "text-success">copyrights: </b> {{album.copyrights[0].text}}</h4>
+        <h3 class = "text-light"><b class = "text-success">{{album.artists[0].type}}: </b> {{album.artists[0].name}} | <b class = "text-success">album popularity: </b>{{album.popularity}}</h3>
+        <h4 class = "text-light"><b class = "text-success">copyrights: </b> {{album.copyrights[0].text}}</h4>
         </div>
       <h1 class = "display-3 text-success">Tracks: </h1>
       <div *ngFor = "let item of album.tracks.items">
-          <h1 >{{item.name}}</h1>
+          <h1 class = "text-light">{{item.name}}</h1>
           <audio controls src="{{item.preview_url}}">{{item.name}}</audio>
       </div>
       <div class="btn-group">
-        <a type="button" class="btn btn-primary" href (click)="back()"><h5><b>Back</b></h5></a>
-        <a type="button" class="btn btn-success" href = '{{album.external_urls.spotify}}'><h5><b>view the album on spotify</b></h5></a>
+        <a type="button" class="btn btn-primary" (click)="back()">Back</a>
+        <a type="button" class="btn btn-success" href = '{{album.external_urls.spotify}}'>View the album on spotify</a>
       </div>
     </div>
   </div>
