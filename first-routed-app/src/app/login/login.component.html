@@ -1,6 +1,7 @@
-<span>Login with</span>
-<div *ngIf="!isAuthorized" class="img-container">
-  <img src="assets/spotify.png" width="30%" height="30%" (click)="login()" />
+<hr>
+<div>
+  <button class="btn btn-success" *ngIf="!isAuthorized" (click)="login()">Login with spotify</button>
+  <button class="btn btn-danger" *ngIf="isAuthorized" (click)="logout()">Logout</button>
 </div>
+<hr>
 
-<button  *ngIf="isAuthorized" (click)="logout()">logout</button>
