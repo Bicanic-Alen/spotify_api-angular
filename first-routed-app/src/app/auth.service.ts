@@ -10,9 +10,9 @@ export class AuthService {
 token : string = "";
   requestAuthUrl = 'https://accounts.spotify.com/authorize';
   authConfig: AuthConfig = {
-    client_id: "349c705ef41345f78a72bea003ef086d",  // WebPortal App Id. Shoud be config
+    client_id: "6be680f0bcb74feda00a0f82b56f9d0d",  // WebPortal App Id. Shoud be config
     response_type: "token",
-    redirect_uri: "https://4200-b62af0f8-bd88-47b8-ab57-6c606af19453.ws-eu03.gitpod.io/authorized",  // My URL
+    redirect_uri: "https://4200-b95a1332-1632-4410-b0cb-f083a80821bc.ws-eu03.gitpod.io/authorized",  // My URL
     state: "",
     show_dialog: true,
     scope: new ScopesBuilder().withScopes(ScopesBuilder.LIBRARY).build()
